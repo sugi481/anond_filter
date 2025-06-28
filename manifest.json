@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "はてな匿名ダイアリー カスタマイザー",
+    "version": "1.0.1",
+    "description": "指定した正規表現で記事をフィルタリングし、人気エントリや広告・トラッキング要素を非表示にします。",
+    "icons": {
+	"48": "icons/filter-icon-48.png"
+    },
+    "browser_specific_settings": {
+	"gecko": {
+	    "id": "some-name@example.org"
+	}
+    },
+    "permissions": [
+	"storage",
+	"https://anond.hatelabo.jp/*"
+    ],
+    
+    "content_scripts": [
+	{
+	    "matches": ["https://anond.hatelabo.jp/*"],
+	    "js": ["content_script.js"],
+	    "run_at": "document_idle" // ★ この行を追加してください
+	}
+    ],
+    
+    "options_ui": {
+	"page": "options.html",
+	"browser_style": true
+    },
+    
+    "content_security_policy": "script-src 'self'; object-src 'self';"
+}

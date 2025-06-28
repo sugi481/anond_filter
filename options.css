@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  width: 500px;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.button-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#save-button {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+#status-message {
+  margin-left: 15px;
+  color: #008000;
+}

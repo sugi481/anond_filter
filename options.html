@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>フィルター設定</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h2>フィルタリング設定</h2>
+    <p>非表示にしたい記事に含まれるキーワードやパターンを正規表現で入力してください。（1行に1つ）</p>
+    <textarea id="regex-filters" rows="15"></textarea>
+    <div class="button-container">
+      <button id="save-button">保存</button>
+      <span id="status-message"></span>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
